@@ -3,6 +3,8 @@ import Script from "next/script";
 
 import "@/app/globals.css";
 import Navbar from "@/components/Navbar";
+import Footer from "@/components/Footer";
+
 import "../../public/assets/fonts/unicons/unicons.css";
 import "../../public/assets/css/plugins.css";
 
@@ -18,87 +20,17 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-    <body>
-      <div className="grow shrink-0">
-        <Navbar />
-        <section className="wrapper">
-          {children}
-        </section>
-      </div>
-      <footer className=" bg-[#21262c] opacity-100  text-[#cacaca]">
-        <div className="container py-16 xl:!py-20 lg:!py-20 md:!py-20">
-          <div className="flex flex-wrap mx-[-15px] mt-[-30px] xl:mt-0 lg:mt-0">
-            <div
-                className="xl:w-4/12 lg:w-4/12 w-full flex-[0_0_auto] px-[15px] max-w-full md:mt-[30px] sm:mt-[30px] xsm:mt-[30px]">
-              <div className="widget">
-                <img className="!mb-4" src="./assets/img/logo-light.png" srcSet="./assets/img/logo-light@2x.png 2x"
-                     alt="image" />
-                <p className="!mb-4">© 2024 Sandbox. All rights reserved.</p>
-                <nav className="nav social social-white">
-                  <a className="m-[0_.7rem_0_0] text-[1rem] transition-all duration-[0.2s] ease-in-out translate-y-0 hover:translate-y-[-0.15rem]"
-                     href="#"><i className="uil uil-twitter before:content-['\ed59'] text-[1rem] text-[#5daed5]"></i></a>
-                  <a className="m-[0_.7rem_0_0] text-[1rem] transition-all duration-[0.2s] ease-in-out translate-y-0 hover:translate-y-[-0.15rem]"
-                     href="#"><i
-                      className="uil uil-facebook-f before:content-['\eae2'] text-[1rem] text-[#4470cf]"></i></a>
-                  <a className="m-[0_.7rem_0_0] text-[1rem] transition-all duration-[0.2s] ease-in-out translate-y-0 hover:translate-y-[-0.15rem]"
-                     href="#"><i className="uil uil-dribbble before:content-['\eaa2'] text-[1rem] text-[#e94d88]"></i></a>
-                  <a className="m-[0_.7rem_0_0] text-[1rem] transition-all duration-[0.2s] ease-in-out translate-y-0 hover:translate-y-[-0.15rem]"
-                     href="#"><i
-                      className="uil uil-instagram before:content-['\eb9c'] text-[1rem] text-[#d53581]"></i></a>
-                  <a className="m-[0_.7rem_0_0] text-[1rem] transition-all duration-[0.2s] ease-in-out translate-y-0 hover:translate-y-[-0.15rem]"
-                     href="#"><i className="uil uil-youtube before:content-['\edb5'] text-[1rem] text-[#c8312b]"></i></a>
-                </nav>
-              </div>
-            </div>
-            <div
-                className="md:w-4/12 lg:w-2/12 xl:w-2/12 w-full flex-[0_0_auto] px-[15px] max-w-full lg:!ml-[16.66666667%] xl:!ml-[16.66666667%] md:mt-[30px] sm:mt-[30px] xsm:mt-[30px]">
-              <div className="widget">
-                <h4 className="widget-title text-white !mb-3">Need Help?</h4>
-                <ul className="pl-0 list-none text-inherit  !mb-0">
-                  <li><a className="text-[#cacaca] hover:text-[#3f78e0]" href="#">Support</a></li>
-                  <li className="mt-[0.35rem]"><a className="text-[#cacaca] hover:text-[#3f78e0]" href="#">Get Started</a>
-                  </li>
-                  <li className="mt-[0.35rem]"><a className="text-[#cacaca] hover:text-[#3f78e0]" href="#">Terms of
-                    Use</a></li>
-                  <li className="mt-[0.35rem]"><a className="text-[#cacaca] hover:text-[#3f78e0]" href="#">Privacy
-                    Policy</a></li>
-                </ul>
-              </div>
-            </div>
-            <div
-                className="md:w-4/12 lg:w-2/12 xl:w-2/12 w-full flex-[0_0_auto] px-[15px] max-w-full md:mt-[30px] sm:mt-[30px] xsm:mt-[30px]">
-              <div className="widget">
-                <h4 className="widget-title text-white !mb-3">Learn More</h4>
-                <ul className="pl-0 list-none   !mb-0">
-                  <li><a className="text-[#cacaca] hover:text-[#3f78e0]" href="#">About Us</a></li>
-                  <li className="mt-[0.35rem]"><a className="text-[#cacaca] hover:text-[#3f78e0]" href="#">Our Story</a>
-                  </li>
-                  <li className="mt-[0.35rem]"><a className="text-[#cacaca] hover:text-[#3f78e0]" href="#">Projects</a>
-                  </li>
-                  <li className="mt-[0.35rem]"><a className="text-[#cacaca] hover:text-[#3f78e0]" href="#">Pricing</a>
-                  </li>
-                  <li className="mt-[0.35rem]"><a className="text-[#cacaca] hover:text-[#3f78e0]" href="#">Features</a>
-                  </li>
-                </ul>
-              </div>
-            </div>
-            <div
-                className="md:w-4/12 lg:w-2/12 xl:w-2/12 w-full flex-[0_0_auto] px-[15px] max-w-full md:mt-[30px] sm:mt-[30px] xsm:mt-[30px]">
-              <div className="widget">
-                <h4 className="widget-title text-white !mb-3">Get in Touch</h4>
-                <address className=" not-italic leading-[inherit] mb-4">Moonshine St. 14/05 Light City, London, United
-                  Kingdom
-                </address>
-                <a className="text-[#cacaca] hover:text-[#3f78e0]"
-                   href="mailto:first.last@email.com">info@email.com</a><br /> 00 (123) 456 78 90
-              </div>
-            </div>
-          </div>
+      <body>
+        <div className="grow shrink-0">
+          <Navbar />
+          <section className="wrapper">
+            {children}
+          </section>
         </div>
-      </footer>
-      <Script src="assets/js/plugins.js" />
-      <Script src="assets/js/theme.js" />
-    </body>
+        <Footer />
+        <Script src="assets/js/plugins.js" />
+        <Script src="assets/js/theme.js" />
+      </body>
     </html>
   );
 }
