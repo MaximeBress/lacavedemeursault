@@ -1,0 +1,67 @@
+import fs from 'node:fs';
+
+import { Designation } from '@/typing/designation';
+import { Wine } from '@/typing/wine';
+import Image from 'next/image';
+import Link from 'next/link';
+
+export default function WinePage({ params: { slug } }: { params: { slug: string } }) {
+  const jsonDesignation = fs.readFileSync('src/datas/designation.json', 'utf8');
+  const jsonWines = fs.readFileSync('src/datas/wines.json', 'utf8');
+  const wine: Wine = JSON.parse(jsonWines).find((wine: Wine) => wine.slug === slug);
+  const designation: Designation = JSON.parse(jsonDesignation).find(
+    (designation: Designation) => designation.slug === wine.type
+  );
+
+  return (
+    <div className="wrapper !bg-[#ffffff]">
+      <figure className="!mb-8 !rounded-[.4rem] md:!mb-[3.5rem] lg:!mb-[3.5rem] xl:!mb-[3.5rem]">
+        <Image src="/img/illustration/vineyard5.jpg" alt={wine.name} width={3000} height={600} />
+      </figure>
+      <div className="xl:!pb -24 container !pb-[4.5rem] md:!pb-24  lg:!pb-24">
+        <section className="wrapper !bg-[#ffffff]">
+          <div className="container pb-[4.5rem]">
+            <div className="mx-[-15px] mt-[-30px] flex flex-wrap items-center md:mx-[-20px] lg:mx-[-20px] xl:mx-[-35px]">
+              <div className="!mx-auto mt-[30px] w-full max-w-full flex-[0_0_auto] px-[15px] md:w-8/12 lg:w-6/12 lg:px-[20px] xl:w-6/12 xl:px-[35px]">
+                <div className="img-mask">
+                  <Image src="/img/wines/pommard.jpg" alt={wine.name} width={400} height={200} />
+                </div>
+              </div>
+              <div className="mt-[30px] w-full max-w-full flex-[0_0_auto] px-[15px] lg:w-6/12 lg:px-[20px] xl:w-6/12 xl:px-[35px]">
+                <h2 className="text-[calc(1.295rem_+_0.54vw)] font-semibold !leading-[1.25] tracking-[normal] xl:text-[1.7rem]">
+                  {wine.vintage} {wine.name} {wine.grapeVariety && `- ${wine.grapeVariety}`}
+                </h2>
+                <h4 className="mb-5 mt-2">{wine.floors && `Sols ${wine.floors}`}</h4>
+                <p className="!mb-6" dangerouslySetInnerHTML={{ __html: wine.description }} />
+                {wine.winemakingMethod && (
+                  <>
+                    <h3 className="!text-[1.15rem] font-semibold !leading-[1.4]">Méthode de Vinification</h3>
+                    <p dangerouslySetInnerHTML={{ __html: wine.winemakingMethod }} />
+                  </>
+                )}
+                {wine.tasting && (
+                  <>
+                    <h3 className="!text-[1.15rem] font-semibold !leading-[1.4]">Dégustation</h3>
+                    <p dangerouslySetInnerHTML={{ __html: wine.tasting }} />
+                  </>
+                )}
+                {wine.pairings && (
+                  <>
+                    <h3 className="!text-[1.15rem] font-semibold !leading-[1.4]">Accords Met et vin</h3>
+                    <p dangerouslySetInnerHTML={{ __html: wine.pairings }} />
+                  </>
+                )}
+                <Link
+                  href={`/nos-vins/${wine.type}`}
+                  className="btn btn-outline-gradient gradient-2 mt-10 !rounded-[50rem]"
+                >
+                  <span>Retour vers les {designation.name}</span>
+                </Link>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </div>
+  );
+}

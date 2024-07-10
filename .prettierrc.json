@@ -8,7 +8,15 @@
   "bracketSameLine": false,
   "jsxSingleQuote": false,
   "printWidth": 120,
-  "importOrder": ["<THIRD_PARTY_MODULES>", "^@(/app|/components)/(.*)$", "^~/(.*)$", "^[./]"],
+  "importOrder": [
+    "<THIRD_PARTY_MODULES>",
+    "^@(/app|/components|/typing)/(.*)$",
+    "^~/(.*)$",
+    "^[./]"
+  ],
   "importOrderSeparation": true,
-  "plugins": ["prettier-plugin-organize-imports", "prettier-plugin-tailwindcss"]
+  "plugins": [
+    "prettier-plugin-organize-imports",
+    "prettier-plugin-tailwindcss"
+  ]
 }

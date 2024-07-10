@@ -2694,7 +2694,10 @@ button:focus {
   @apply translate-y-0;
 }
 .navbar-stick:not(.navbar-dark) {
-  @apply bg-[rgba(255,255,255,.97)] shadow-[0_0_1.25rem_rgba(30,34,40,0.06)];
+  @apply bg-[#21262c] shadow-[0_0_1.25rem_rgba(30,34,40,0.06)];
+}
+.navbar-stick:not(.navbar-dark) .nav-link {
+    @apply text-white hover:opacity-60;
 }
 button.hamburger {
   @apply my-0 ml-[0.2rem] mr-0 flex cursor-pointer flex-col items-center justify-center border-0 bg-inherit p-0 text-[#343f52] transition-all duration-[0.2s] ease-in-out before:content-[""] after:content-[""] motion-reduce:transition-none;
@@ -3394,7 +3397,7 @@ a.hover-2:hover:before {
   @apply bg-[rgba(255,255,255,.7)];
 }
 .swiper-controls .swiper-pagination {
-  @apply !absolute bottom-[-2.8rem];
+  @apply !absolute !bottom-0;
   pointer-events: all;
 }
 .swiper-controls .swiper-pagination .swiper-pagination-bullet {

@@ -5,6 +5,7 @@ import '@/app/globals.css';
 import Footer from '@/components/Footer';
 import Navbar from '@/components/Navbar';
 
+import '../../public/assets/css/icon.css';
 import '../../public/assets/css/plugins.css';
 import '../../public/assets/fonts/unicons/unicons.css';
 
@@ -26,8 +27,8 @@ export default function RootLayout({
           <section className="wrapper">{children}</section>
         </div>
         <Footer />
-        <Script src="assets/js/plugins.js" />
-        <Script src="assets/js/theme.js" />
+        <Script src="/assets/js/plugins.js" />
+        <Script src="/assets/js/theme.js" />
       </body>
     </html>
   );
