@@ -2,7 +2,7 @@ runtime: php
 env: flex
 
 skip_files:
-- tests
+  - tests
 
 runtime_config:
   document_root: examples
