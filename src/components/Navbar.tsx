@@ -23,22 +23,17 @@ const Navbar = () => (
           <div className="offcanvas-body flex !h-full flex-col  lg:!ml-auto xl:!ml-auto">
             <ul className="navbar-nav">
               <li className="nav-item">
-                <Link href="/qui-sommes-nous" className="nav-link">
+                <Link href="/qui-sommes-nous" className="nav-link font-montserrat">
                   Qui sommes nous
                 </Link>
               </li>
               <li className="nav-item">
-                <Link href="/nos-vins" className="nav-link">
+                <Link href="/nos-vins" className="nav-link font-montserrat">
                   Nos vins
                 </Link>
               </li>
               <li className="nav-item">
-                <Link href="/nos-vignes" className="nav-link">
-                  Nos vignes
-                </Link>
-              </li>
-              <li className="nav-item">
-                <Link href="/contact" className="nav-link">
+                <Link href="/contact" className="nav-link font-montserrat">
                   Contact
                 </Link>
               </li>

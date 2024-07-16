@@ -28,33 +28,32 @@ export default function WinePage({ params: { slug } }: { params: { slug: string 
                 </div>
               </div>
               <div className="mt-[30px] w-full max-w-full flex-[0_0_auto] px-[15px] lg:w-6/12 lg:px-[20px] xl:w-6/12 xl:px-[35px]">
-                <h2 className="text-[calc(1.295rem_+_0.54vw)] font-semibold !leading-[1.25] tracking-[normal] xl:text-[1.7rem]">
-                  {wine.vintage} {wine.name} {wine.grapeVariety && `- ${wine.grapeVariety}`}
+                <h2 className="font-great-vibes text-gold text-[calc(1.295rem_+_0.54vw)] font-semibold !leading-[1.25] tracking-[normal] xl:text-[1.7rem]">
+                  {wine.name} {wine.vintage && `- ${wine.vintage}`} {wine.grapeVariety && `- ${wine.grapeVariety}`}
                 </h2>
-                <h4 className="mb-5 mt-2">{wine.floors && `Sols ${wine.floors}`}</h4>
+                <h4 className="font-montserrat mb-5 mt-2">{wine.floors && `Sols ${wine.floors}`}</h4>
                 <p className="!mb-6" dangerouslySetInnerHTML={{ __html: wine.description }} />
                 {wine.winemakingMethod && (
                   <>
-                    <h3 className="!text-[1.15rem] font-semibold !leading-[1.4]">Méthode de Vinification</h3>
+                    <h3 className="font-montserrat !text-[1.15rem] font-semibold !leading-[1.4]">
+                      MÉTHODE DE VINIFICATION
+                    </h3>
                     <p dangerouslySetInnerHTML={{ __html: wine.winemakingMethod }} />
                   </>
                 )}
                 {wine.tasting && (
                   <>
-                    <h3 className="!text-[1.15rem] font-semibold !leading-[1.4]">Dégustation</h3>
+                    <h3 className="font-montserrat !text-[1.15rem] font-semibold !leading-[1.4]">Dégustation</h3>
                     <p dangerouslySetInnerHTML={{ __html: wine.tasting }} />
                   </>
                 )}
                 {wine.pairings && (
                   <>
-                    <h3 className="!text-[1.15rem] font-semibold !leading-[1.4]">Accords Met et vin</h3>
+                    <h3 className="font-montserrat !text-[1.15rem] font-semibold !leading-[1.4]">Accords Met et vin</h3>
                     <p dangerouslySetInnerHTML={{ __html: wine.pairings }} />
                   </>
                 )}
-                <Link
-                  href={`/nos-vins/${wine.type}`}
-                  className="btn btn-outline-gradient gradient-2 mt-10 !rounded-[50rem]"
-                >
+                <Link href={`/nos-vins/${wine.type}`} className="btn btn-outline-primary-dark mt-2 !rounded-[50rem]">
                   <span>Retour vers les {designation.name}</span>
                 </Link>
               </div>

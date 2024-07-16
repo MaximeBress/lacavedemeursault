@@ -40,11 +40,23 @@
   -webkit-animation-iteration-count: calc(var(--animate-repeat) * 3);
   animation-iteration-count: calc(var(--animate-repeat) * 3);
 }
+.animate__animated.animate__delay-500ms {
+  -webkit-animation-delay: 500ms;
+  animation-delay: 500ms;
+  -webkit-animation-delay: calc(var(--animate-delay) / 2);
+  animation-delay: calc(var(--animate-delay) / 2);
+}
 .animate__animated.animate__delay-1s {
   -webkit-animation-delay: 1s;
   animation-delay: 1s;
   -webkit-animation-delay: var(--animate-delay);
   animation-delay: var(--animate-delay);
+}
+.animate__animated.animate__delay-1500ms {
+  -webkit-animation-delay: 1500ms;
+  animation-delay: 1500ms;
+  -webkit-animation-delay: calc(var(--animate-delay) * 1.5);
+  animation-delay: calc(var(--animate-delay) * 1.5);
 }
 .animate__animated.animate__delay-2s {
   -webkit-animation-delay: 2s;

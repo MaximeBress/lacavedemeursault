@@ -1,3 +1,21 @@
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+.font-montserrat {
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+}
+.font-great-vibes {
+  font-family: "Great Vibes", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.text-gold {
+  color: #b2936d;
+}
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -2041,6 +2059,29 @@ button:focus {
   disabled:border-[#3f78e0]
   disabled:bg-[#3f78e0];
 }
+
+.btn-outline-gold {
+  @apply border-[#b2936d]
+  text-[#b2936d]
+  hover:border-[#b2936d]
+  hover:bg-[#b2936d]
+  active:border-[#b2936d]
+  active:bg-[#b2936d]
+  disabled:border-[#b2936d]
+  disabled:bg-[#b2936d];
+}
+
+.btn-outline-primary-dark {
+  @apply border-[#182539]
+  text-[#182539]
+  hover:border-[#182539]
+  hover:bg-[#182539]
+  active:border-[#182539]
+  active:bg-[#182539]
+  disabled:border-[#182539]
+  disabled:bg-[#182539];
+}
+
 .btn-gradient {
   @apply border-0 py-[0.6rem] !text-white;
 }
@@ -7333,7 +7374,7 @@ footer.bg-dark {
     @apply absolute;
   }
   .projects-overflow .item {
-    @apply mt-40;
+    @apply mt-20;
   }
 }
 @media (max-width: 991.98px) {

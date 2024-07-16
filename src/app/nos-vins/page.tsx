@@ -28,10 +28,10 @@ export default function Wines() {
                 <div className="container !h-full">
                   <div className="mx-[-15px] flex !h-full flex-wrap">
                     <div className="w-full max-w-full flex-[0_0_auto] items-start justify-center self-center px-[15px] text-center md:!ml-[8.33333333%] md:w-10/12 lg:!ml-0 lg:w-8/12 lg:text-left xl:w-8/12 xl:text-left xxl:w-8/12">
-                      <h2 className="animate__animated animate__slideInDown animate__delay-1s mb-4 text-[calc(1.405rem_+_1.86vw)] font-bold !leading-[1.2] text-white xl:text-[2.8rem]">
+                      <h2 className="font-great-vibes animate__animated animate__slideInDown animate__delay-500ms mb-4 text-[calc(1.405rem_+_1.86vw)] font-bold !leading-[1.2] text-white xl:text-[2rem]">
                         Nos vins
                       </h2>
-                      <p className="lead animate__animated animate__slideInRight animate__delay-2s mb-7 text-[1.15rem] leading-normal text-white">
+                      <p className="lead animate__animated animate__slideInRight animate__delay-1s mb-7 text-[1rem] leading-normal text-white">
                         Nous élevons la plupart des appellations d’origine contrôlées (AOC) bourguignonnes avec autant
                         de plaisir. Qu’il s’agisse d’une AOC régionale ou village, d’un Premier Cru ou d’un prestigieux
                         Grand Cru, notre souci permanent est de vous offrir des vins élégants, fins et structurés. Des
@@ -69,16 +69,15 @@ export default function Wines() {
                   >
                     <div className="card-body flex-[1_1_auto] p-[40px]">
                       <div className="post-header">
-                        <div className="relative !mb-3 inline-flex pl-[1.4rem] align-top text-[0.7rem] font-bold uppercase tracking-[0.02rem] text-[#747ed1] opacity-100 before:absolute before:left-0 before:top-2/4 before:inline-block before:h-[0.05rem] before:w-3 before:translate-y-[-60%] before:bg-[#747ed1] before:content-['']">
+                        <h1 className="font-great-vibes text-gold post-title !mb-3 leading-[1.35]">
                           {designations[0].name}
-                        </div>
-                        <h2 className="post-title !mb-3 leading-[1.35]">{designations[0].name}</h2>
+                        </h1>
                       </div>
                       <div className="!relative">
                         <p dangerouslySetInnerHTML={{ __html: designations[0].shortDescription }} />
                         <Link
                           href={`/nos-vins/${designations[0].slug}`}
-                          className="more hover text-[#747ed1] hover:text-[#747ed1] focus:text-[#747ed1]"
+                          className="font-montserrat more hover text-[#b2936d] hover:text-[#b2936d] focus:text-[#b2936d]"
                         >
                           Voir les vins
                         </Link>
@@ -103,22 +102,21 @@ export default function Wines() {
                   style={{ left: '18%', bottom: '25%' }}
                 >
                   <div
-                    className="card  rellax shadow-[0_0_1.25rem_rgba(30,34,40,0.04)]"
+                    className="card rellax shadow-[0_0_1.25rem_rgba(30,34,40,0.04)]"
                     data-rellax-xs-speed="0"
                     data-rellax-mobile-speed="0"
                   >
                     <div className="card-body flex-[1_1_auto] p-[40px]">
                       <div className="post-header">
-                        <div className="relative !mb-3 inline-flex pl-[1.4rem] align-top text-[0.7rem] font-bold uppercase tracking-[0.02rem] text-[#7cb798] opacity-100 before:absolute before:left-0 before:top-2/4 before:inline-block before:h-[0.05rem] before:w-3 before:translate-y-[-60%] before:bg-[#7cb798] before:content-['']">
+                        <h1 className="font-great-vibes text-gold post-title !mb-3 leading-[1.35]">
                           {designations[1].name}
-                        </div>
-                        <h2 className="post-title !mb-3 leading-[1.35]">{designations[1].name}</h2>
+                        </h1>
                       </div>
                       <div className="!relative">
                         <p dangerouslySetInnerHTML={{ __html: designations[1].shortDescription }} />
                         <Link
                           href={`/nos-vins/${designations[1].slug}`}
-                          className="more hover text-[#7cb798] hover:text-[#7cb798] focus:text-[#7cb798]"
+                          className="font-montserrat more hover text-[#b2936d] hover:text-[#b2936d] focus:text-[#b2936d]"
                         >
                           Voir les vins
                         </Link>
@@ -143,22 +141,21 @@ export default function Wines() {
                   style={{ right: '3%', bottom: '25%' }}
                 >
                   <div
-                    className="card  rellax shadow-[0_0_1.25rem_rgba(30,34,40,0.04)]"
+                    className="card rellax shadow-[0_0_1.25rem_rgba(30,34,40,0.04)]"
                     data-rellax-xs-speed="0"
                     data-rellax-mobile-speed="0"
                   >
                     <div className="card-body flex-[1_1_auto] p-[40px]">
                       <div className="post-header">
-                        <div className="relative inline-flex pl-[1.4rem] align-top text-[0.7rem] font-bold uppercase tracking-[0.02rem] text-[#f78b77] opacity-100 before:absolute before:left-0 before:top-2/4 before:inline-block before:inline-block before:h-[0.05rem] before:h-[0.05rem] before:w-3 before:w-3 before:translate-y-[-60%] before:translate-y-[-60%] before:bg-[#a07cc5] before:content-[''] before:content-['']">
+                        <h1 className="font-great-vibes text-gold post-title !mb-3 leading-[1.35]">
                           {designations[2].name}
-                        </div>
-                        <h2 className="post-title !mb-3 leading-[1.35]">{designations[2].name}</h2>
+                        </h1>
                       </div>
                       <div className="!relative">
                         <p dangerouslySetInnerHTML={{ __html: designations[2].shortDescription }} />
                         <Link
                           href={`/nos-vins/${designations[2].slug}`}
-                          className="more hover text-[#f78b77] hover:text-[#f78b77] focus:text-[#f78b77]"
+                          className="font-montserrat more hover text-[#b2936d] hover:text-[#b2936d] focus:text-[#b2936d]"
                         >
                           Voir les vins
                         </Link>
@@ -180,7 +177,7 @@ export default function Wines() {
                 </figure>
                 <div
                   className="project-details flex flex-col justify-center px-[15px]"
-                  style={{ left: '12%', bottom: '25%' }}
+                  style={{ left: '6%', bottom: '9%' }}
                 >
                   <div
                     className="card  rellax shadow-[0_0_1.25rem_rgba(30,34,40,0.04)]"
@@ -189,16 +186,15 @@ export default function Wines() {
                   >
                     <div className="card-body flex-[1_1_auto] p-[40px]">
                       <div className="post-header">
-                        <div className="relative !mb-3 inline-flex pl-[1.4rem] align-top text-[0.7rem] font-bold uppercase tracking-[0.02rem] text-[#fab758] opacity-100 before:absolute before:left-0 before:top-2/4 before:inline-block before:h-[0.05rem] before:w-3 before:translate-y-[-60%] before:bg-[#fab758] before:content-['']">
+                        <h1 className="font-great-vibes text-gold post-title !mb-3 leading-[1.35]">
                           {designations[3].name}
-                        </div>
-                        <h2 className="post-title !mb-3 leading-[1.35]">{designations[3].name}</h2>
+                        </h1>
                       </div>
                       <div className="!relative">
                         <p dangerouslySetInnerHTML={{ __html: designations[3].shortDescription }} />
                         <Link
                           href={`/nos-vins/${designations[3].slug}`}
-                          className="more hover text-[#fab758] hover:text-[#fab758] focus:text-[#fab758]"
+                          className="font-montserrat more hover text-[#b2936d] hover:text-[#b2936d] focus:text-[#b2936d]"
                         >
                           Voir les vins
                         </Link>

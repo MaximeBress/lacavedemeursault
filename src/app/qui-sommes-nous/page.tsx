@@ -1,7 +1,215 @@
+import Image from 'next/image';
+
+type Vine = {
+  name: string;
+  nickName: string;
+  image: string;
+};
+
 export default function Us() {
+  const vines: Vine[] = [
+    {
+      name: 'Monthelie',
+      nickName: '« Les Sous-Roches »',
+      image: '/img/vines/monthelie.png'
+    },
+    {
+      name: 'Meursault Village',
+      nickName: '« Les Charrons »',
+      image: '/img/vines/meursault-village.png'
+    },
+    {
+      name: 'Auxey-Duresses',
+      nickName: '« Les Ruchottes »',
+      image: '/img/vines/auxey-duresses.png'
+    },
+    {
+      name: 'Meursault',
+      nickName: '« Les Narvaux »',
+      image: '/img/vines/meursault-les-narvaux.png'
+    },
+    {
+      name: 'Savigny les Beaune 1er cru',
+      nickName: '« Aux Fourneaux »',
+      image: '/img/vines/savigny-les-beaune.png'
+    },
+    {
+      name: 'Chorey-les-Beaune',
+      nickName: '« Les Champs Piétants »',
+      image: '/img/vines/chorey-les-beaune.png'
+    }
+  ];
+
   return (
-    <div className="container py-[4.5rem] md:!py-24 lg:!py-24 xl:!py-24">
-      <h1>Qui sommes nous ?</h1>
+    <div className="wrapper">
+      <div
+        className="swiper-container swiper-hero dots-over relative z-10"
+        data-margin="0"
+        data-autoplay="true"
+        data-autoplaytime="7000"
+        data-nav="true"
+        data-dots="true"
+        data-items="1"
+      >
+        <div className="swiper">
+          <div className="swiper-wrapper">
+            <div
+              className="swiper-slide bg-overlay bg-overlay-400  bg-image !h-[750px] bg-[#21262c] !bg-cover !bg-[center_center] opacity-100 before:absolute before:left-0 before:top-0 before:z-[1] before:block before:h-full before:w-full before:bg-[rgba(30,34,40,.4)] before:content-['']"
+              data-image-src="/img/illustration/vineyard4.jpg"
+            >
+              <div className="container !h-full">
+                <div className="mx-[-15px] flex !h-full flex-wrap">
+                  <div className="w-full max-w-full flex-[0_0_auto] items-start justify-center self-center px-[15px] text-center md:!ml-[8.33333333%] md:w-10/12 lg:!ml-0 lg:w-8/12 lg:text-left xl:w-8/12 xl:text-left xxl:w-8/12">
+                    <h2 className="font-great-vibes animate__animated animate__slideInDown animate__delay-500ms mb-4 text-[calc(1.405rem_+_1.86vw)] font-bold !leading-[1.2] text-white xl:text-[2rem]">
+                      Propriétaires récoltants négociants éleveurs depuis 3 générations
+                    </h2>
+                    <p className="lead animate__animated animate__slideInRight animate__delay-1s mb-7 text-[1rem] leading-normal text-white">
+                      Après nos pères, c’est aujourd’hui au tour de nos fils de se lancer et de se préparer à assurer la
+                      continuité de la maison Albert David et Fils.
+                      <br />
+                      Antoine, Alexandre ont donc rejoint notre équipe et tout comme David et Michel-Henri, c’est
+                      notamment le contact humain et la satisfaction de la clientèle qui leur tient le plus à cœur.
+                      <br />
+                      Pour vous satisfaire, notre souci permanent est de vous offrir des vins élégants, fins et
+                      structurés qui respectent le terroir de leurs villages.
+                      <br />
+                      Durant la vinification et l’élevage en cuve et/ou en fûts de chêne, ils sont travaillés de manière
+                      à ce qu’ils vous donnent le meilleur d’eux-mêmes.
+                      <br />
+                      Les vins que nous vous proposons sont issus d’une viticulture raisonnée, car respecter la nature
+                      est le meilleur moyen de transmettre de génération en génération un outil de travail performant.
+                      <br />
+                      La satisfaction du client passe aussi par un service impeccable.
+                      <br />
+                      C’est pourquoi nous avons choisi d’assurer nous même la livraison de vos vins.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <section className="wrapper !bg-[#ffffff]">
+        <div className="container pb-16 pt-20 md:pb-20 md:pt-28 lg:pb-20 lg:pt-28 xl:pb-20 xl:pt-28">
+          <div className="mx-[-15px] mt-[-50px] flex flex-wrap items-center lg:mx-[-20px] xl:mx-[-35px]">
+            <div className="!relative mt-[50px] w-full max-w-full flex-[0_0_auto] px-[15px] lg:!order-2 lg:w-6/12 lg:px-[20px] xl:!order-2 xl:w-6/12 xl:px-[35px]">
+              <div
+                className="shape bg-dot primary rellax absolute z-[1] !h-[10rem] !w-[6rem] bg-[radial-gradient(#b2936d_2px,transparent_2.5px)] opacity-50"
+                data-rellax-speed="1"
+                style={{ top: '3rem', left: '5.5rem' }}
+              ></div>
+              <div className="overlap-grid-2 !relative flex flex-wrap">
+                <div className="item md:z-[3] md:ml-[30%] md:mt-0 md:w-[70%] lg:z-[3] lg:ml-[30%] lg:mt-0 lg:w-[70%] xl:z-[3] xl:ml-[30%] xl:mt-0 xl:w-[70%]">
+                  <figure className="relative !rounded-[.4rem] shadow-[0_0_1.25rem_rgba(30,34,40,0.04)]">
+                    <Image
+                      className="!rounded-[.4rem]"
+                      width={500}
+                      height={500}
+                      src="/img/team/team2.jpg"
+                      alt="team1"
+                    />
+                  </figure>
+                </div>
+                <div className="item md:z-[4] md:ml-0 md:mt-[-45%] md:w-[55%] lg:z-[4] lg:ml-0 lg:mt-[-45%] lg:w-[55%] xl:z-[4] xl:ml-0 xl:mt-[-45%] xl:w-[55%]">
+                  <figure className="relative !rounded-[.4rem] shadow-[0_0_1.25rem_rgba(30,34,40,0.04)]">
+                    <Image
+                      className="!rounded-[.4rem]"
+                      width={500}
+                      height={500}
+                      src="/img/team/team1.jpg"
+                      alt="team2"
+                    />
+                  </figure>
+                </div>
+              </div>
+            </div>
+            <div className="mt-[50px] w-full max-w-full flex-[0_0_auto] px-[15px] lg:w-6/12 lg:px-[20px] xl:w-6/12 xl:px-[35px]">
+              <h2 className="font-great-vibes text-gold !mb-3 text-[calc(1.305rem_+_0.66vw)] font-bold leading-[1.3] xl:text-[1.8rem]">
+                Notre équipe
+              </h2>
+              <p className="lead !text-[1.05rem] font-medium !leading-[1.6]">
+                Au domaine, toutes les décisions sont prises en famille, tant au niveau de l’élaboration des vins que du
+                choix des évènements pour présenter notre production.
+              </p>
+              <p className="!mb-6">
+                Néanmoins, à chacun ses préférences : David et Michel-Henri sont en contact direct avec la clientèle
+                alors que Jean et Jean-Michel s’occupent plus de la partie viticulture-vinification-élevage.
+                <br />
+                Même si la maison familiale reste à Nuits Saint Georges et qu’une partie des vins de négoce y sont
+                encore vinifiés et élevés, nous avons choisi de regrouper sur un seul site d’exploitation, à Meursault,
+                l’ensemble des activités du Domaine Boyer Bouanich.
+                <br />
+                C’est là qu’une salle de dégustation avec vue panoramique sur le vignoble de Meursault vous attend pour
+                partager le verre de l’amitié.
+                <br />
+                Pour nos amis belges que nous servons depuis plus de 50 ans et qui ne peuvent se rendre en Bourgogne,
+                nous avons créé la Grange à Bacchus. Nous y organisons régulièrement des dégustations pour lesquelles
+                notre traiteur concocte un magnifique buffet froid aussi frais que varié.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section className="wrapper !bg-[#fff6e9]">
+        <div className="overflow-hidden">
+          <div className="container py-[4.5rem] md:!py-24 lg:!py-24 xl:!py-24">
+            <div className="mx-[-15px] flex flex-wrap">
+              <div className="!mx-auto w-full max-w-full flex-[0_0_auto] px-[15px] !text-center lg:w-9/12 xl:w-8/12 xxl:w-7/12">
+                <i className="icn-flower text-[calc(1.275rem_+_0.3vw)] text-[#004c25] opacity-25 before:content-['\e907'] xl:!text-[1.5rem]"></i>
+                <h1 className="font-great-vibes !mt-2 mb-10 !text-center text-[calc(1.295rem_+_0.54vw)] font-semibold !leading-[1.25] tracking-[normal] xl:text-[1.7rem]">
+                  Nos Vignes
+                </h1>
+              </div>
+            </div>
+
+            <div
+              className="swiper-container grid-view !mb-6"
+              data-margin="30"
+              data-nav="true"
+              data-autoheight="true"
+              data-dots="true"
+              data-items-xl="3"
+              data-items-md="2"
+              data-items-xs="1"
+            >
+              <div className="swiper">
+                <div className="swiper-wrapper">
+                  {vines.map((vine, index) => (
+                    <div key={`vine-${index}`} className="swiper-slide group">
+                      <figure className="!mb-6">
+                        <Image
+                          className="h-auto max-w-full !rounded-[.4rem]"
+                          src={vine.image}
+                          alt={vine.name}
+                          width={500}
+                          height={500}
+                        />
+                        <a
+                          className="item-link absolute bottom-4 right-0 z-[1] flex h-[2.2rem] w-[2.2rem] items-center justify-center rounded-[100%] bg-[rgba(255,255,255,.7)] text-[1rem] leading-[2.2rem] text-[#343f52] opacity-0 shadow-[0_0.25rem_0.75rem_rgba(30,34,40,0.02)] transition-all duration-[0.3s] ease-in-out hover:bg-[rgba(255,255,255,.9)] hover:!text-[#343f52] group-hover:right-[1rem] group-hover:opacity-100"
+                          href={vine.image}
+                          data-glightbox="true"
+                          data-gallery="projects-group"
+                        >
+                          <i className="uil uil-focus-add before:content-['\eb22']"></i>
+                        </a>
+                      </figure>
+                      <div className="project-details flex flex-col justify-center">
+                        <div className="font-montserrat post-header text-center uppercase">
+                          <h2 className="h4">{vine.name}</h2>
+                          <div className="mb-[0.4rem] text-[0.7rem] font-bold tracking-[0.02rem] text-[#9499a3]">
+                            {vine.nickName}
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
     </div>
   );
 }
