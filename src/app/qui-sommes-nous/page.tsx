@@ -41,55 +41,43 @@ export default function Us() {
   ];
 
   return (
-    <div className="wrapper">
-      <div
-        className="swiper-container swiper-hero dots-over relative z-10"
-        data-margin="0"
-        data-autoplay="true"
-        data-autoplaytime="7000"
-        data-nav="true"
-        data-dots="true"
-        data-items="1"
-      >
-        <div className="swiper">
-          <div className="swiper-wrapper">
-            <div
-              className="swiper-slide bg-overlay bg-overlay-400  bg-image !h-[750px] bg-[#21262c] !bg-cover !bg-[center_center] opacity-100 before:absolute before:left-0 before:top-0 before:z-[1] before:block before:h-full before:w-full before:bg-[rgba(30,34,40,.4)] before:content-['']"
-              data-image-src="/img/illustration/vineyard4.jpg"
-            >
-              <div className="container !h-full">
-                <div className="mx-[-15px] flex !h-full flex-wrap">
-                  <div className="w-full max-w-full flex-[0_0_auto] items-start justify-center self-center px-[15px] text-center md:!ml-[8.33333333%] md:w-10/12 lg:!ml-0 lg:w-8/12 lg:text-left xl:w-8/12 xl:text-left xxl:w-8/12">
-                    <h2 className="font-great-vibes animate__animated animate__slideInDown animate__delay-500ms mb-4 text-[calc(1.405rem_+_1.86vw)] font-bold !leading-[1.2] text-white xl:text-[2rem]">
-                      Propriétaires récoltants négociants éleveurs depuis 3 générations
-                    </h2>
-                    <p className="lead animate__animated animate__slideInRight animate__delay-1s mb-7 text-[1rem] leading-normal text-white">
-                      Après nos pères, c’est aujourd’hui au tour de nos fils de se lancer et de se préparer à assurer la
-                      continuité de la maison Albert David et Fils.
-                      <br />
-                      Antoine, Alexandre ont donc rejoint notre équipe et tout comme David et Michel-Henri, c’est
-                      notamment le contact humain et la satisfaction de la clientèle qui leur tient le plus à cœur.
-                      <br />
-                      Pour vous satisfaire, notre souci permanent est de vous offrir des vins élégants, fins et
-                      structurés qui respectent le terroir de leurs villages.
-                      <br />
-                      Durant la vinification et l’élevage en cuve et/ou en fûts de chêne, ils sont travaillés de manière
-                      à ce qu’ils vous donnent le meilleur d’eux-mêmes.
-                      <br />
-                      Les vins que nous vous proposons sont issus d’une viticulture raisonnée, car respecter la nature
-                      est le meilleur moyen de transmettre de génération en génération un outil de travail performant.
-                      <br />
-                      La satisfaction du client passe aussi par un service impeccable.
-                      <br />
-                      C’est pourquoi nous avons choisi d’assurer nous même la livraison de vos vins.
-                    </p>
-                  </div>
-                </div>
+    <>
+      <section className="wrapper">
+        <div
+          className="swiper-slide bg-overlay bg-overlay-400  bg-image !h-[750px] bg-[#21262c] !bg-cover !bg-[center_center] opacity-100 before:absolute before:left-0 before:top-0 before:z-[1] before:block before:h-full before:w-full before:bg-[rgba(30,34,40,.4)] before:content-['']"
+          data-image-src="/img/illustration/vineyard4.jpg"
+        >
+          <div className="container !h-full">
+            <div className="mx-[-15px] flex !h-full flex-wrap">
+              <div className="w-full max-w-full flex-[0_0_auto] items-start justify-center self-center px-[15px] text-center md:!ml-[8.33333333%] md:w-10/12 lg:!ml-0 lg:w-8/12 lg:text-left xl:w-8/12 xl:text-left xxl:w-8/12">
+                <h2 className="font-great-vibes animate__animated animate__slideInDown animate__delay-500ms mb-4 text-[calc(1.405rem_+_1.86vw)] font-bold !leading-[1.2] text-white xl:text-[2rem]">
+                  Propriétaires récoltants négociants éleveurs depuis 3 générations
+                </h2>
+                <p className="lead animate__animated animate__slideInRight animate__delay-1s mb-7 text-[1rem] leading-normal text-white">
+                  Après nos pères, c’est aujourd’hui au tour de nos fils de se lancer et de se préparer à assurer la
+                  continuité de la maison Albert David et Fils.
+                  <br />
+                  Antoine, Alexandre ont donc rejoint notre équipe et tout comme David et Michel-Henri, c’est notamment
+                  le contact humain et la satisfaction de la clientèle qui leur tient le plus à cœur.
+                  <br />
+                  Pour vous satisfaire, notre souci permanent est de vous offrir des vins élégants, fins et structurés
+                  qui respectent le terroir de leurs villages.
+                  <br />
+                  Durant la vinification et l’élevage en cuve et/ou en fûts de chêne, ils sont travaillés de manière à
+                  ce qu’ils vous donnent le meilleur d’eux-mêmes.
+                  <br />
+                  Les vins que nous vous proposons sont issus d’une viticulture raisonnée, car respecter la nature est
+                  le meilleur moyen de transmettre de génération en génération un outil de travail performant.
+                  <br />
+                  La satisfaction du client passe aussi par un service impeccable.
+                  <br />
+                  C’est pourquoi nous avons choisi d’assurer nous même la livraison de vos vins.
+                </p>
               </div>
             </div>
           </div>
         </div>
-      </div>
+      </section>
       <section className="wrapper !bg-[#ffffff]">
         <div className="container pb-16 pt-20 md:pb-20 md:pt-28 lg:pb-20 lg:pt-28 xl:pb-20 xl:pt-28">
           <div className="mx-[-15px] mt-[-50px] flex flex-wrap items-center lg:mx-[-20px] xl:mx-[-35px]">
@@ -164,11 +152,10 @@ export default function Us() {
             </div>
 
             <div
-              className="swiper-container grid-view !mb-6"
+              className="swiper-container grid-view"
               data-margin="30"
-              data-nav="true"
-              data-autoheight="true"
-              data-dots="true"
+              data-autoplay="true"
+              data-autoplaytime="3000"
               data-items-xl="3"
               data-items-md="2"
               data-items-xs="1"
@@ -210,6 +197,6 @@ export default function Us() {
           </div>
         </div>
       </section>
-    </div>
+    </>
   );
 }

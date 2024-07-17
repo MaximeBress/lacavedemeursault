@@ -13,42 +13,28 @@ export default function WinePage({ params: { type } }: { params: { type: string 
   const wines: Wine[] = JSON.parse(jsonWines).filter((wine: Wine) => wine.type === type);
 
   return (
-    <section className="wrapper !bg-[#ffffff]">
+    <>
       <div
-        className="swiper-container swiper-hero dots-over relative z-10"
-        data-margin="0"
-        data-autoplay="true"
-        data-autoplaytime="7000"
-        data-nav="true"
-        data-dots="true"
-        data-items="1"
+        className="swiper-slide bg-overlay bg-overlay-400  bg-image !h-[750px] bg-[#21262c] !bg-cover !bg-[center_center] opacity-100 before:absolute before:left-0 before:top-0 before:z-[1] before:block before:h-full before:w-full before:bg-[rgba(30,34,40,.4)] before:content-['']"
+        data-image-src="/img/illustration/vineyard3.jpg"
       >
-        <div className="swiper">
-          <div className="swiper-wrapper">
-            <div
-              className="swiper-slide bg-overlay bg-overlay-400  bg-image !h-[750px] bg-[#21262c] !bg-cover !bg-[center_center] opacity-100 before:absolute before:left-0 before:top-0 before:z-[1] before:block before:h-full before:w-full before:bg-[rgba(30,34,40,.4)] before:content-['']"
-              data-image-src="/img/illustration/vineyard3.jpg"
-            >
-              <div className="container !h-full">
-                <div className="mx-[-15px] flex !h-full flex-wrap">
-                  <div className="w-full max-w-full flex-[0_0_auto] items-start justify-center self-center px-[15px] text-center md:!ml-[8.33333333%] md:w-10/12 lg:!ml-0 lg:w-8/12 lg:text-left xl:w-8/12 xl:text-left xxl:w-8/12">
-                    <h2 className="font-great-vibes animate__animated animate__slideInDown animate__delay-500ms mb-4 text-[calc(1.405rem_+_1.86vw)] font-bold !leading-[1.2] text-white xl:text-[2rem]">
-                      {designation.name}
-                    </h2>
-                    <p
-                      className="lead animate__animated animate__slideInRight animate__delay-1s mb-7 text-[1rem] leading-normal text-white"
-                      dangerouslySetInnerHTML={{ __html: designation.description }}
-                    />
-                    <div className="animate__animated animate__slideInUp animate__delay-1500ms">
-                      <Link
-                        href="/nos-vins"
-                        className="btn btn-lg btn-outline-white !rounded-[50rem] !border-[2px] !border-white bg-[#ffffff] !text-white hover:border-white hover:bg-[#ffffff] hover:!text-[#343f52] focus:shadow-[rgba(255,255,255,1)] active:border-white active:bg-[#ffffff] active:!text-[#343f52] disabled:border-white disabled:bg-transparent disabled:text-white"
-                      >
-                        Retour vers tous les vins
-                      </Link>
-                    </div>
-                  </div>
-                </div>
+        <div className="container !h-full">
+          <div className="mx-[-15px] flex !h-full flex-wrap">
+            <div className="w-full max-w-full flex-[0_0_auto] items-start justify-center self-center px-[15px] text-center md:!ml-[8.33333333%] md:w-10/12 lg:!ml-0 lg:w-8/12 lg:text-left xl:w-8/12 xl:text-left xxl:w-8/12">
+              <h2 className="font-great-vibes animate__animated animate__slideInDown animate__delay-500ms mb-4 text-[calc(1.405rem_+_1.86vw)] font-bold !leading-[1.2] text-white xl:text-[2rem]">
+                {designation.name}
+              </h2>
+              <p
+                className="lead animate__animated animate__slideInRight animate__delay-1s mb-7 text-[1rem] leading-normal text-white"
+                dangerouslySetInnerHTML={{ __html: designation.description }}
+              />
+              <div className="animate__animated animate__slideInUp animate__delay-1500ms">
+                <Link
+                  href="/nos-vins"
+                  className="btn btn-lg btn-outline-white !rounded-[50rem] !border-[2px] !border-white bg-[#ffffff] !text-white hover:border-white hover:bg-[#ffffff] hover:!text-[#343f52] focus:shadow-[rgba(255,255,255,1)] active:border-white active:bg-[#ffffff] active:!text-[#343f52] disabled:border-white disabled:bg-transparent disabled:text-white"
+                >
+                  Retour vers tous les vins
+                </Link>
               </div>
             </div>
           </div>
@@ -122,6 +108,6 @@ export default function WinePage({ params: { type } }: { params: { type: string 
           </div>
         </div>
       </div>
-    </section>
+    </>
   );
 }

@@ -24,7 +24,7 @@ export default function RootLayout({
       <body>
         <div className="shrink-0 grow">
           <Navbar />
-          <section className="wrapper">{children}</section>
+          {children}
         </div>
         <Footer />
         <Script src="/assets/js/plugins.js" />
