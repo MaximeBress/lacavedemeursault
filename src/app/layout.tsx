@@ -1,5 +1,7 @@
 import type { Metadata } from 'next';
 import Script from 'next/script';
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 import '@/app/globals.css';
 import Footer from '@/components/Footer';
@@ -25,6 +27,7 @@ export default function RootLayout({
         <div className="shrink-0 grow">
           <Navbar />
           {children}
+          <ToastContainer />
         </div>
         <Footer />
         <Script src="/assets/js/plugins.js" />

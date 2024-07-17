@@ -78,7 +78,7 @@ export default function Us() {
           </div>
         </div>
       </section>
-      <section className="wrapper !bg-[#ffffff]">
+      <section className="wrapper">
         <div className="container pb-16 pt-20 md:pb-20 md:pt-28 lg:pb-20 lg:pt-28 xl:pb-20 xl:pt-28">
           <div className="mx-[-15px] mt-[-50px] flex flex-wrap items-center lg:mx-[-20px] xl:mx-[-35px]">
             <div className="!relative mt-[50px] w-full max-w-full flex-[0_0_auto] px-[15px] lg:!order-2 lg:w-6/12 lg:px-[20px] xl:!order-2 xl:w-6/12 xl:px-[35px]">
