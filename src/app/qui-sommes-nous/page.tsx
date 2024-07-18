@@ -1,4 +1,8 @@
+'use client';
+
 import Image from 'next/image';
+import { Autoplay } from 'swiper/modules';
+import { Swiper, SwiperSlide } from 'swiper/react';
 
 type Vine = {
   name: string;
@@ -45,7 +49,7 @@ export default function Us() {
       <section className="wrapper">
         <div
           className="swiper-slide bg-overlay bg-overlay-400  bg-image !h-[750px] bg-[#21262c] !bg-cover !bg-[center_center] opacity-100 before:absolute before:left-0 before:top-0 before:z-[1] before:block before:h-full before:w-full before:bg-[rgba(30,34,40,.4)] before:content-['']"
-          data-image-src="/img/illustration/vineyard4.jpg"
+          style={{ backgroundImage: "url('/img/illustration/vineyard4.jpg')" }}
         >
           <div className="container !h-full">
             <div className="mx-[-15px] flex !h-full flex-wrap">
@@ -151,49 +155,36 @@ export default function Us() {
               </div>
             </div>
 
-            <div
-              className="swiper-container grid-view"
-              data-margin="30"
-              data-autoplay="true"
-              data-autoplaytime="3000"
-              data-items-xl="3"
-              data-items-md="2"
-              data-items-xs="1"
+            <Swiper
+              className="swiper-container"
+              modules={[Autoplay]}
+              spaceBetween={30}
+              slidesPerView={3}
+              autoplay={{ delay: 3000 }}
+              pagination={{ clickable: true }}
             >
-              <div className="swiper">
-                <div className="swiper-wrapper">
-                  {vines.map((vine, index) => (
-                    <div key={`vine-${index}`} className="swiper-slide group">
-                      <figure className="!mb-6">
-                        <Image
-                          className="h-auto max-w-full !rounded-[.4rem]"
-                          src={vine.image}
-                          alt={vine.name}
-                          width={500}
-                          height={500}
-                        />
-                        <a
-                          className="item-link absolute bottom-4 right-0 z-[1] flex h-[2.2rem] w-[2.2rem] items-center justify-center rounded-[100%] bg-[rgba(255,255,255,.7)] text-[1rem] leading-[2.2rem] text-[#343f52] opacity-0 shadow-[0_0.25rem_0.75rem_rgba(30,34,40,0.02)] transition-all duration-[0.3s] ease-in-out hover:bg-[rgba(255,255,255,.9)] hover:!text-[#343f52] group-hover:right-[1rem] group-hover:opacity-100"
-                          href={vine.image}
-                          data-glightbox="true"
-                          data-gallery="projects-group"
-                        >
-                          <i className="uil uil-focus-add before:content-['\eb22']"></i>
-                        </a>
-                      </figure>
-                      <div className="project-details flex flex-col justify-center">
-                        <div className="font-montserrat post-header text-center uppercase">
-                          <h2 className="h4">{vine.name}</h2>
-                          <div className="mb-[0.4rem] text-[0.7rem] font-bold tracking-[0.02rem] text-[#9499a3]">
-                            {vine.nickName}
-                          </div>
-                        </div>
+              {vines.map((vine, index) => (
+                <SwiperSlide key={`vine-${index}`} className="group">
+                  <figure className="!mb-6">
+                    <Image
+                      className="h-auto max-w-full !rounded-[.4rem]"
+                      src={vine.image}
+                      alt={vine.name}
+                      width={500}
+                      height={500}
+                    />
+                  </figure>
+                  <div className="project-details flex flex-col justify-center">
+                    <div className="font-montserrat post-header text-center uppercase">
+                      <h2 className="h4">{vine.name}</h2>
+                      <div className="mb-[0.4rem] text-[0.7rem] font-bold tracking-[0.02rem] text-[#9499a3]">
+                        {vine.nickName}
                       </div>
                     </div>
-                  ))}
-                </div>
-              </div>
-            </div>
+                  </div>
+                </SwiperSlide>
+              ))}
+            </Swiper>
           </div>
         </div>
       </section>

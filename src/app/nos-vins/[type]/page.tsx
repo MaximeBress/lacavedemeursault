@@ -1,8 +1,9 @@
-import { Designation } from '@/typing/designation';
-import { Wine } from '@/typing/wine';
-import Image from 'next/image';
 import Link from 'next/link';
 import fs from 'node:fs';
+
+import SliderWines from '@/components/SliderWines';
+import { Designation } from '@/typing/designation';
+import { Wine } from '@/typing/wine';
 
 export default function WinePage({ params: { type } }: { params: { type: string } }) {
   const jsonDesignation = fs.readFileSync('src/datas/designation.json', 'utf8');
@@ -16,7 +17,7 @@ export default function WinePage({ params: { type } }: { params: { type: string 
     <>
       <div
         className="swiper-slide bg-overlay bg-overlay-400  bg-image !h-[750px] bg-[#21262c] !bg-cover !bg-[center_center] opacity-100 before:absolute before:left-0 before:top-0 before:z-[1] before:block before:h-full before:w-full before:bg-[rgba(30,34,40,.4)] before:content-['']"
-        data-image-src="/img/illustration/vineyard3.jpg"
+        style={{ backgroundImage: "url('/img/illustration/vineyard3.jpg')" }}
       >
         <div className="container !h-full">
           <div className="mx-[-15px] flex !h-full flex-wrap">
@@ -43,68 +44,7 @@ export default function WinePage({ params: { type } }: { params: { type: string 
       <div className="container py-16">
         <div className="mx-[-15px] mt-[-50px] flex flex-wrap lg:mx-[-20px] lg:mt-0 xl:mx-[-35px] xl:mt-0">
           <div className="w-full max-w-full flex-[0_0_auto] px-[15px] sm:mt-[50px] md:mt-[50px]  xl:px-[35px] xsm:mt-[50px]">
-            <div
-              className="swiper-container blog grid-view !mb-6"
-              data-margin="30"
-              data-dots="true"
-              data-items-lg="5"
-              data-items-md="3"
-              data-items-xs="1"
-            >
-              <div className="swiper">
-                <div className="swiper-wrapper">
-                  {wines.map((wine: Wine) => (
-                    <div key={wine.slug} className="swiper-slide">
-                      <article>
-                        <figure className="overlay overlay-1 hover-scale group !mb-5 rounded">
-                          <Link href={`/nos-vins/${type}/${wine.slug}`}>
-                            <Image
-                              className="!transition-all !duration-[0.35s] !ease-in-out group-hover:scale-105"
-                              src={`/img/wines/pommard.jpg`}
-                              alt={wine.name}
-                              width={400}
-                              height={200}
-                            />
-                          </Link>
-                          <figcaption className="pointer-events-none absolute inset-0 z-[5] h-full w-full p-2 px-4 py-3 text-center opacity-0 group-hover:opacity-100">
-                            <h5 className="from-top absolute left-0 top-2/4 !mb-0 w-full translate-y-[-80%] p-[.75rem_1rem]">
-                              En savoir plus
-                            </h5>
-                          </figcaption>
-                        </figure>
-                        <div className="post-header">
-                          <div className="relative mb-[.4rem] inline-flex pl-[1.4rem] align-top text-[0.7rem] font-bold uppercase tracking-[0.02rem] before:absolute before:left-0 before:top-2/4 before:inline-block before:h-[0.05rem] before:w-3 before:translate-y-[-60%] before:bg-[#b2936d] before:content-['']">
-                            <Link
-                              href={`/nos-vins/${type}/${wine.slug}`}
-                              className="font-montserrat text-gold hover:text-[#816a4c]"
-                              rel="category"
-                            >
-                              {wine.grapeVariety} {wine.vintage && `- ${wine.vintage}`}
-                            </Link>
-                          </div>
-                          <h2 className="post-title font-great-vibes !mb-3 !mt-1">
-                            <Link
-                              href={`/nos-vins/${type}/${wine.slug}`}
-                              className="text-[#343f52] hover:text-[#816a4c]"
-                            >
-                              {wine.name}
-                            </Link>
-                          </h2>
-                          <p>
-                            <Link
-                              href={`/nos-vins/${type}/${wine.slug}`}
-                              className="text-[#aab0bc] hover:text-[#816a4c]"
-                            >
-                              {wine.shortDescription}
-                            </Link>
-                          </p>
-                        </div>
-                      </article>
-                    </div>
-                  ))}
-                </div>
-              </div>
-            </div>
+            <SliderWines wines={wines} type={type} />
           </div>
         </div>
       </div>

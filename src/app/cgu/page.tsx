@@ -3,7 +3,7 @@ export default function CGU() {
     <>
       <div
         className="swiper-slide bg-overlay bg-overlay-400  bg-image !h-[200px] bg-[#21262c] !bg-cover !bg-[center_center] opacity-100 before:absolute before:left-0 before:top-0 before:z-[1] before:block before:h-full before:w-full before:bg-[rgba(30,34,40,.4)] before:content-['']"
-        data-image-src="/img/illustration/header_bg.jpg"
+        style={{ backgroundImage: "url('/img/illustration/header_bg.jpg')" }}
       />
       <section className="wrapper">
         <div className="container p-16 md:p-20 lg:p-20 xl:p-20">

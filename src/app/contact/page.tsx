@@ -4,8 +4,8 @@ export default function Contact() {
   return (
     <>
       <div
-        className="swiper-slide bg-overlay bg-overlay-400  bg-image !h-[200px] bg-[#21262c] !bg-cover !bg-[center_center] opacity-100 before:absolute before:left-0 before:top-0 before:z-[1] before:block before:h-full before:w-full before:bg-[rgba(30,34,40,.4)] before:content-['']"
-        data-image-src="/img/illustration/header_bg.jpg"
+        className="swiper-slide bg-overlay bg-overlay-400 bg-image !h-[200px] bg-[#21262c] !bg-cover !bg-[center_center] opacity-100 before:absolute before:left-0 before:top-0 before:z-[1] before:block before:h-full before:w-full before:bg-[rgba(30,34,40,.4)] before:content-['']"
+        style={{ backgroundImage: "url('/img/illustration/header_bg.jpg')" }}
       />
       <section className="wrapper">
         <div className="container pb-16 pt-20 md:pb-20 md:pt-28 lg:pb-20 lg:pt-28 xl:pb-20 xl:pt-28">

@@ -11,7 +11,7 @@ export default function Wines() {
     <>
       <div
         className="swiper-slide bg-overlay bg-overlay-400  bg-image !h-[750px]  bg-[#21262c] !bg-cover !bg-[center_center] opacity-100 before:absolute before:left-0 before:top-0 before:z-[1] before:block before:h-full before:w-full before:bg-[rgba(30,34,40,.4)] before:content-['']"
-        data-image-src="/img/illustration/vineyard.jpg"
+        style={{ backgroundImage: "url('/img/illustration/vineyard.jpg')" }}
       >
         <div className="container !h-full">
           <div className="mx-[-15px] flex !h-full flex-wrap">

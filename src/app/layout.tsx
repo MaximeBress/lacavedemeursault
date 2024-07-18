@@ -1,5 +1,4 @@
 import type { Metadata } from 'next';
-import Script from 'next/script';
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
@@ -30,8 +29,6 @@ export default function RootLayout({
           <ToastContainer />
         </div>
         <Footer />
-        <Script src="/assets/js/plugins.js" />
-        <Script src="/assets/js/theme.js" />
       </body>
     </html>
   );
