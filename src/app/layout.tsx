@@ -2,9 +2,9 @@ import type { Metadata } from 'next';
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
+import Footer from '@/app/components/Footer';
+import Navigation from '@/app/components/Navigation';
 import '@/app/globals.css';
-import Footer from '@/components/Footer';
-import Navbar from '@/components/Navbar';
 
 import '../../public/assets/css/icon.css';
 import '../../public/assets/css/plugins.css';
@@ -24,7 +24,7 @@ export default function RootLayout({
     <html lang="en">
       <body>
         <div className="shrink-0 grow">
-          <Navbar />
+          <Navigation />
           {children}
           <ToastContainer />
         </div>

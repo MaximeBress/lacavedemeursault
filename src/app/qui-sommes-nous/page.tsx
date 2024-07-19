@@ -53,11 +53,11 @@ export default function Us() {
         >
           <div className="container !h-full">
             <div className="mx-[-15px] flex !h-full flex-wrap">
-              <div className="w-full max-w-full flex-[0_0_auto] items-start justify-center self-center px-[15px] text-center md:!ml-[8.33333333%] md:w-10/12 lg:!ml-0 lg:w-8/12 lg:text-left xl:w-8/12 xl:text-left xxl:w-8/12">
+              <div className="w-full max-w-full flex-[0_0_auto] items-start justify-center self-center px-[15px] md:!ml-[8.33333333%] md:w-10/12 lg:!ml-0 lg:w-10/12 lg:text-left xl:w-8/12 xl:text-left xxl:w-8/12">
                 <h2 className="font-great-vibes animate__animated animate__slideInDown animate__delay-500ms mb-4 text-[calc(1.405rem_+_1.86vw)] font-bold !leading-[1.2] text-white xl:text-[2rem]">
                   Propriétaires récoltants négociants éleveurs depuis 3 générations
                 </h2>
-                <p className="lead animate__animated animate__slideInRight animate__delay-1s mb-7 text-[1rem] leading-normal text-white">
+                <p className="lead animate__animated animate__slideInRight animate__delay-1s mb-7  leading-normal text-white lg:text-[1rem] xl:text-[1rem] xxl:text-[1rem]">
                   Après nos pères, c’est aujourd’hui au tour de nos fils de se lancer et de se préparer à assurer la
                   continuité de la maison Albert David et Fils.
                   <br />

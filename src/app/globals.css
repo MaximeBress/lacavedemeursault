@@ -2674,9 +2674,6 @@ button:focus {
 .tab-content {
   @apply mt-5;
 }
-.navbar {
-  @apply z-[1020] w-full;
-}
 .navbar .container {
   @apply relative;
 }

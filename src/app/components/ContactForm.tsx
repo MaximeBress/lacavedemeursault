@@ -3,7 +3,7 @@
 import { useForm } from 'react-hook-form';
 import { toast } from 'react-toastify';
 
-import { ContactFormData } from '@/typing/contact';
+import { ContactFormData } from '@/app/typing/contact';
 
 const ContactForm = () => {
   const { register, handleSubmit, reset } = useForm<ContactFormData>();

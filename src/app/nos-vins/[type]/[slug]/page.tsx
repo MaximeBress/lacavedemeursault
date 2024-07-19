@@ -1,13 +1,13 @@
 import fs from 'node:fs';
 
-import { Designation } from '@/typing/designation';
-import { Wine } from '@/typing/wine';
+import { Designation } from '@/app/typing/designation';
+import { Wine } from '@/app/typing/wine';
 import Image from 'next/image';
 import Link from 'next/link';
 
 export default function WinePage({ params: { slug } }: { params: { slug: string } }) {
-  const jsonDesignation = fs.readFileSync('src/datas/designation.json', 'utf8');
-  const jsonWines = fs.readFileSync('src/datas/wines.json', 'utf8');
+  const jsonDesignation = fs.readFileSync('src/app/datas/designation.json', 'utf8');
+  const jsonWines = fs.readFileSync('src/app/datas/wines.json', 'utf8');
   const wine: Wine = JSON.parse(jsonWines).find((wine: Wine) => wine.slug === slug);
   const designation: Designation = JSON.parse(jsonDesignation).find(
     (designation: Designation) => designation.slug === wine.type

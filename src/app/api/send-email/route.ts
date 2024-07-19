@@ -1,7 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { Resend } from 'resend';
 
-import { ContactEmail } from '@/components/ContactEmail';
+import { ContactEmail } from '@/app/components/ContactEmail';
 
 const resend = new Resend(process.env.RESEND_API_KEY);
 

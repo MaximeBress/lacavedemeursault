@@ -25,7 +25,7 @@ export default function Home() {
       >
         <SwiperSlide
           style={{ backgroundImage: "url('/img/homepage/homepage1.jpg')" }}
-          className="bg-overlay bg-overlay-400 bg-image !h-[750px] bg-[#21262c] !bg-cover !bg-[center_center] opacity-100 before:absolute before:left-0 before:top-0 before:z-[1] before:block before:h-full before:w-full before:bg-[rgba(30,34,40,.4)] before:content-['']"
+          className="bg-overlay bg-overlay-400 bg-image bg-[#21262c] !bg-cover !bg-[center_center] opacity-100 before:absolute before:left-0 before:top-0 before:z-[1] before:block before:h-full before:w-full before:bg-[rgba(30,34,40,.4)] before:content-[''] lg:!h-[750px]"
         >
           <div className="container !h-full">
             <div className="mx-[-15px] flex !h-full flex-wrap">
@@ -39,7 +39,7 @@ export default function Home() {
         </SwiperSlide>
         <SwiperSlide
           style={{ backgroundImage: "url('/img/homepage/homepage2.jpg')" }}
-          className="bg-overlay bg-overlay-400 bg-image !h-[750px] bg-[#21262c] !bg-cover !bg-[center_center] opacity-100 before:absolute before:left-0 before:top-0 before:z-[1] before:block before:h-full before:w-full before:bg-[rgba(30,34,40,.4)] before:content-['']"
+          className="bg-overlay bg-overlay-400 bg-image bg-[#21262c] !bg-cover !bg-[center_center] opacity-100 before:absolute before:left-0 before:top-0 before:z-[1] before:block before:h-full before:w-full before:bg-[rgba(30,34,40,.4)] before:content-[''] lg:!h-[750px]"
         >
           <div className="container !h-full">
             <div className="mx-[-15px] flex !h-full flex-wrap">
@@ -47,7 +47,7 @@ export default function Home() {
                 <h2 className="font-great-vibes animate__animated animate__slideInDown animate__delay-500ms mb-4 text-[calc(1.405rem_+_1.86vw)] font-bold !leading-[1.2] text-white xl:text-[2.8rem]">
                   Notre philosophie du vin
                 </h2>
-                <p className="lead animate__animated animate__slideInRight animate__delay-1s mb-7 text-[1.15rem] leading-normal text-white">
+                <p className="lead animate__animated animate__slideInRight animate__delay-1s mb-7 leading-normal text-white lg:text-[1.15rem] xl:text-[1.15rem] xxl:text-[1.15rem]">
                   Nous partageons avec notre équipe l’envie d’offrir à notre clientèle les meilleurs vins de Bourgogne,
                   associés à un service personnalisé.
                 </p>
@@ -65,15 +65,15 @@ export default function Home() {
         </SwiperSlide>
         <SwiperSlide
           style={{ backgroundImage: "url('/img/homepage/homepage3.jpg')" }}
-          className="bg-overlay bg-overlay-400 bg-image !h-[750px] bg-[#21262c] !bg-cover !bg-[center_center] opacity-100 before:absolute before:left-0 before:top-0 before:z-[1] before:block before:h-full before:w-full before:bg-[rgba(30,34,40,.4)] before:content-['']"
+          className="bg-overlay bg-overlay-400 bg-image bg-[#21262c] !bg-cover !bg-[center_center] opacity-100 before:absolute before:left-0 before:top-0 before:z-[1] before:block before:h-full before:w-full before:bg-[rgba(30,34,40,.4)] before:content-[''] lg:!h-[750px]"
         >
           <div className="container !h-full">
             <div className="mx-[-15px] flex !h-full flex-wrap">
-              <div className="w-full max-w-full flex-[0_0_auto] items-start justify-center self-center px-[15px] text-center md:!ml-[8.33333333%] md:w-10/12 lg:!ml-0 lg:w-7/12 lg:text-left xl:w-6/12 xl:text-left">
+              <div className="w-full max-w-full flex-[0_0_auto] items-start justify-center self-center px-[15px] md:!ml-[8.33333333%] md:w-10/12 lg:!ml-0 lg:w-7/12 lg:text-left xl:w-6/12 xl:text-left">
                 <h2 className="font-great-vibes animate__animated animate__slideInDown animate__delay-500ms mb-4 text-[calc(1.405rem_+_1.86vw)] font-bold !leading-[1.2] text-white xl:text-[2.8rem]">
                   À votre service
                 </h2>
-                <p className="lead animate__animated animate__slideInRight animate__delay-1s mb-7 text-[1.15rem] leading-normal text-white">
+                <p className="lead animate__animated animate__slideInRight animate__delay-1s mb-7 leading-normal text-white lg:text-[1.15rem] xl:text-[1.15rem] xxl:text-[1.15rem]">
                   Vous êtes unique, c’est pourquoi nos vins et notre service le sont également. Que vous soyez livrés en
                   fûts ou en bouteilles, notre seul désir : répondre à vos besoins.
                   <br />

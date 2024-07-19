@@ -1,6 +1,6 @@
 'use client';
 
-import { Wine } from '@/typing/wine';
+import { Wine } from '@/app/typing/wine';
 import Image from 'next/image';
 import Link from 'next/link';
 import { Navigation, Pagination } from 'swiper/modules';

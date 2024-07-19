@@ -1,13 +1,13 @@
 import Link from 'next/link';
 import fs from 'node:fs';
 
-import SliderWines from '@/components/SliderWines';
-import { Designation } from '@/typing/designation';
-import { Wine } from '@/typing/wine';
+import SliderWines from '@/app/components/SliderWines';
+import { Designation } from '@/app/typing/designation';
+import { Wine } from '@/app/typing/wine';
 
 export default function WinePage({ params: { type } }: { params: { type: string } }) {
-  const jsonDesignation = fs.readFileSync('src/datas/designation.json', 'utf8');
-  const jsonWines = fs.readFileSync('src/datas/wines.json', 'utf8');
+  const jsonDesignation = fs.readFileSync('src/app/datas/designation.json', 'utf8');
+  const jsonWines = fs.readFileSync('src/app/datas/wines.json', 'utf8');
   const designation: Designation = JSON.parse(jsonDesignation).find(
     (designation: Designation) => designation.slug === type
   );
@@ -21,7 +21,7 @@ export default function WinePage({ params: { type } }: { params: { type: string 
       >
         <div className="container !h-full">
           <div className="mx-[-15px] flex !h-full flex-wrap">
-            <div className="w-full max-w-full flex-[0_0_auto] items-start justify-center self-center px-[15px] text-center md:!ml-[8.33333333%] md:w-10/12 lg:!ml-0 lg:w-8/12 lg:text-left xl:w-8/12 xl:text-left xxl:w-8/12">
+            <div className="w-full max-w-full flex-[0_0_auto] items-start justify-center self-center px-[15px] md:!ml-[8.33333333%] md:w-10/12 lg:!ml-0 lg:w-8/12 lg:text-left xl:w-8/12 xl:text-left xxl:w-8/12">
               <h2 className="font-great-vibes animate__animated animate__slideInDown animate__delay-500ms mb-4 text-[calc(1.405rem_+_1.86vw)] font-bold !leading-[1.2] text-white xl:text-[2rem]">
                 {designation.name}
               </h2>
