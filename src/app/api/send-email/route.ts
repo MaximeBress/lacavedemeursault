@@ -16,7 +16,7 @@ export async function POST(req: NextRequest) {
     }
 
     const { data, error } = await resend.emails.send({
-      from: `La cave de Meursault <${contactEmail}>`,
+      from: `La cave de Meursault <noreply@resend.dev>`,
       to: [contactEmail],
       subject: 'Nouvelle prise de contact',
       text: '',
