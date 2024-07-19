@@ -2,7 +2,7 @@
 
 import Image from 'next/image';
 import Link from 'next/link';
-import { Autoplay, Navigation, Pagination } from 'swiper/modules';
+import { Autoplay, EffectFade, Navigation, Pagination } from 'swiper/modules';
 import { Swiper, SwiperSlide } from 'swiper/react';
 
 export default function Home() {
@@ -10,12 +10,17 @@ export default function Home() {
     <>
       <Swiper
         className="swiper-container swiper-hero dots-over relative z-10"
-        modules={[Autoplay, Navigation, Pagination]}
+        modules={[Autoplay, Navigation, Pagination, EffectFade]}
+        effect={'fade'}
         spaceBetween={0}
         slidesPerView={1}
         autoplay={{ delay: 7000 }}
-        pagination={{ clickable: true }}
-        navigation
+        pagination={{ clickable: true, el: '.swiper-pagination' }}
+        navigation={{
+          enabled: true,
+          nextEl: '.swiper-button-next',
+          prevEl: '.swiper-button-prev'
+        }}
         loop
       >
         <SwiperSlide
@@ -87,6 +92,13 @@ export default function Home() {
             </div>
           </div>
         </SwiperSlide>
+        <div className="swiper-controls">
+          <div className="swiper-navigation">
+            <div className="swiper-button swiper-button-prev" />
+            <div className="swiper-button swiper-button-next" />
+          </div>
+          <div className="swiper-pagination" />
+        </div>
       </Swiper>
       <section className="wrapper">
         <div className="container pb-[4.5rem] pt-14 md:pb-24 md:pt-[4.5rem] lg:pb-24 lg:pt-[4.5rem] xl:pb-24 xl:pt-[4.5rem]">

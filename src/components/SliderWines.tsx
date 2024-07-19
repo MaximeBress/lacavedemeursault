@@ -9,11 +9,24 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 const SliderWines = ({ wines, type }: { wines: Wine[]; type: string }) => (
   <Swiper
     modules={[Pagination, Navigation]}
-    pagination={{ clickable: true }}
     className="swiper-container blog grid-view !mb-6"
     spaceBetween={30}
-    slidesPerView={5}
-    navigation
+    breakpoints={{
+      768: {
+        slidesPerView: 3
+      },
+      1280: {
+        slidesPerView: 5
+      }
+    }}
+    pagination={{ clickable: true, el: '.swiper-pagination' }}
+    navigation={{
+      enabled: true,
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev'
+    }}
+    loop
+    grabCursor
   >
     {wines.map((wine: Wine) => (
       <SwiperSlide key={wine.slug}>
@@ -58,6 +71,13 @@ const SliderWines = ({ wines, type }: { wines: Wine[]; type: string }) => (
         </article>
       </SwiperSlide>
     ))}
+    <div className="swiper-controls">
+      <div className="swiper-navigation">
+        <div className="swiper-button swiper-button-prev" />
+        <div className="swiper-button swiper-button-next" />
+      </div>
+      <div className="swiper-pagination" />
+    </div>
   </Swiper>
 );
 export default SliderWines;

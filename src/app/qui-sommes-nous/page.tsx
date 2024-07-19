@@ -1,7 +1,7 @@
 'use client';
 
 import Image from 'next/image';
-import { Autoplay } from 'swiper/modules';
+import { Autoplay, Navigation } from 'swiper/modules';
 import { Swiper, SwiperSlide } from 'swiper/react';
 
 type Vine = {
@@ -157,11 +157,23 @@ export default function Us() {
 
             <Swiper
               className="swiper-container"
-              modules={[Autoplay]}
+              modules={[Autoplay, Navigation]}
               spaceBetween={30}
-              slidesPerView={3}
+              breakpoints={{
+                768: {
+                  slidesPerView: 2
+                },
+                1280: {
+                  slidesPerView: 3
+                }
+              }}
               autoplay={{ delay: 3000 }}
-              pagination={{ clickable: true }}
+              navigation={{
+                enabled: true,
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev'
+              }}
+              loop
             >
               {vines.map((vine, index) => (
                 <SwiperSlide key={`vine-${index}`} className="group">
@@ -184,6 +196,12 @@ export default function Us() {
                   </div>
                 </SwiperSlide>
               ))}
+              <div className="swiper-controls">
+                <div className="swiper-navigation">
+                  <div className="swiper-button swiper-button-prev" />
+                  <div className="swiper-button swiper-button-next" />
+                </div>
+              </div>
             </Swiper>
           </div>
         </div>
