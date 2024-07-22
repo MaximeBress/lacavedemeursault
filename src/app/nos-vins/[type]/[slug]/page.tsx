@@ -1,9 +1,19 @@
+import Image from 'next/image';
+import Link from 'next/link';
 import fs from 'node:fs';
 
 import { Designation } from '@/app/typing/designation';
 import { Wine } from '@/app/typing/wine';
-import Image from 'next/image';
-import Link from 'next/link';
+
+export async function generateStaticParams() {
+  const jsonWines = fs.readFileSync('src/app/datas/wines.json', 'utf8');
+  const wines: Wine[] = JSON.parse(jsonWines);
+
+  return wines.map((wine) => ({
+    slug: wine.slug,
+    type: wine.type
+  }));
+}
 
 export default function WinePage({ params: { slug } }: { params: { slug: string } }) {
   const jsonDesignation = fs.readFileSync('src/app/datas/designation.json', 'utf8');

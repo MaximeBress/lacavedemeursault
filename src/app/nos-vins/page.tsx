@@ -1,7 +1,8 @@
-import { Designation } from '@/app/typing/designation';
 import Image from 'next/image';
 import Link from 'next/link';
 import * as fs from 'node:fs';
+
+import { Designation } from '@/app/typing/designation';
 
 export default function Wines() {
   const jsonString = fs.readFileSync('src/app/datas/designation.json', 'utf8');

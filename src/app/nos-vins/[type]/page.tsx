@@ -5,6 +5,16 @@ import SliderWines from '@/app/components/SliderWines';
 import { Designation } from '@/app/typing/designation';
 import { Wine } from '@/app/typing/wine';
 
+export async function generateStaticParams() {
+  const jsonDesignation = fs.readFileSync('src/app/datas/designation.json', 'utf8');
+
+  const designations: Designation[] = JSON.parse(jsonDesignation);
+
+  return designations.map((designation) => ({
+    type: designation.slug
+  }));
+}
+
 export default function WinePage({ params: { type } }: { params: { type: string } }) {
   const jsonDesignation = fs.readFileSync('src/app/datas/designation.json', 'utf8');
   const jsonWines = fs.readFileSync('src/app/datas/wines.json', 'utf8');
