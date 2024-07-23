@@ -13,7 +13,7 @@ export default function Us() {
     <>
       <section className="wrapper">
         <div
-          className="swiper-slide bg-overlay bg-overlay-400  bg-image !h-[750px] bg-[#21262c] !bg-cover !bg-[center_center] opacity-100 before:absolute before:left-0 before:top-0 before:z-[1] before:block before:h-full before:w-full before:bg-[rgba(30,34,40,.4)] before:content-['']"
+          className="swiper-slide bg-overlay bg-overlay-400 bg-image !h-[750px] bg-[#21262c] !bg-cover !bg-[center_center] opacity-100 before:absolute before:left-0 before:top-0 before:z-[1] before:block before:h-full before:w-full before:bg-[rgba(30,34,40,.4)] before:content-['']"
           style={{ backgroundImage: "url('/img/illustration/vineyard4.jpg')" }}
         >
           <div className="container !h-full">
@@ -26,21 +26,23 @@ export default function Us() {
                   Après nos pères, c’est aujourd’hui au tour de nos fils de se lancer et de se préparer à assurer la
                   continuité de la maison Albert David et Fils.
                   <br />
-                  Antoine, Alexandre ont donc rejoint notre équipe et tout comme David et Michel-Henri, c’est notamment
-                  le contact humain et la satisfaction de la clientèle qui leur tient le plus à cœur.
+                  Antoine, Alexandre ont donc rejoint notre équipe, tout comme David, c’est notamment le contact humain
+                  et la satisfaction de la clientèle qui leur tient le plus à cœur.
                   <br />
                   Pour vous satisfaire, notre souci permanent est de vous offrir des vins élégants, fins et structurés
                   qui respectent le terroir de leurs villages.
                   <br />
                   Durant la vinification et l’élevage en cuve et/ou en fûts de chêne, ils sont travaillés de manière à
                   ce qu’ils vous donnent le meilleur d’eux-mêmes.
-                  <br />
-                  Les vins que nous vous proposons sont issus d’une viticulture raisonnée, car respecter la nature est
-                  le meilleur moyen de transmettre de génération en génération un outil de travail performant.
-                  <br />
-                  La satisfaction du client passe aussi par un service impeccable.
-                  <br />
-                  C’est pourquoi nous avons choisi d’assurer nous même la livraison de vos vins.
+                  <span className="hidden lg:flex">
+                    <br />
+                    Les vins que nous vous proposons sont issus d’une viticulture raisonnée, car respecter la nature est
+                    le meilleur moyen de transmettre de génération en génération un outil de travail performant.
+                    <br />
+                    La satisfaction du client passe aussi par un service impeccable.
+                    <br />
+                    C’est pourquoi nous avons choisi d’assurer nous même la livraison de vos vins.
+                  </span>
                 </p>
               </div>
             </div>
@@ -90,8 +92,8 @@ export default function Us() {
                 choix des évènements pour présenter notre production.
               </p>
               <p className="!mb-6">
-                Néanmoins, à chacun ses préférences : David et Michel-Henri sont en contact direct avec la clientèle
-                alors que Jean et Jean-Michel s’occupent plus de la partie viticulture-vinification-élevage.
+                Néanmoins, à chacun ses préférences : David est en contact direct avec la clientèle alors que Jean et
+                Jean-Michel s’occupent plus de la partie viticulture-vinification-élevage.
                 <br />
                 Même si la maison familiale reste à Nuits Saint Georges et qu’une partie des vins de négoce y sont
                 encore vinifiés et élevés, nous avons choisi de regrouper sur un seul site d’exploitation, à Meursault,
