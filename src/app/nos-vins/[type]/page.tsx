@@ -1,9 +1,13 @@
 import Link from 'next/link';
 import fs from 'node:fs';
 
-import SliderWines from '@/app/components/SliderWines';
+import SliderWines from '@/app/components/Sliders/SliderWines';
 import { Designation } from '@/app/typing/designation';
 import { Wine } from '@/app/typing/wine';
+
+type Props = {
+  params: { type: string };
+};
 
 export async function generateStaticParams() {
   const jsonDesignation = fs.readFileSync('src/app/datas/designation.json', 'utf8');
@@ -15,7 +19,19 @@ export async function generateStaticParams() {
   }));
 }
 
-export default function WinePage({ params: { type } }: { params: { type: string } }) {
+export function generateMetadata({ params: { type } }: Props) {
+  const jsonDesignation = fs.readFileSync('src/app/datas/designation.json', 'utf8');
+  const designation: Designation = JSON.parse(jsonDesignation).find(
+    (designation: Designation) => designation.slug === type
+  );
+
+  return {
+    title: designation.metaTitle,
+    description: designation.metaDescription
+  };
+}
+
+export default function WinePage({ params: { type } }: Props) {
   const jsonDesignation = fs.readFileSync('src/app/datas/designation.json', 'utf8');
   const jsonWines = fs.readFileSync('src/app/datas/wines.json', 'utf8');
   const designation: Designation = JSON.parse(jsonDesignation).find(

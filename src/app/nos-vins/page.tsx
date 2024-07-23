@@ -3,6 +3,13 @@ import Link from 'next/link';
 import * as fs from 'node:fs';
 
 import { Designation } from '@/app/typing/designation';
+import type { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'Sélection de vins de Bourgogne | La Cave de Meursault',
+  description:
+    'La Cave de Meursault vous propose une sélection raffinée de vins de Bourgogne. Des blancs élégants aux rouges puissants, trouvez votre vin idéal parmi nos références.'
+};
 
 export default function Wines() {
   const jsonString = fs.readFileSync('src/app/datas/designation.json', 'utf8');

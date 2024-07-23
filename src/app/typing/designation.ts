@@ -4,4 +4,6 @@ export type Designation = {
   image: string;
   shortDescription: string;
   description: string;
+  metaTitle: string;
+  metaDescription: string;
 };

@@ -2,6 +2,8 @@
   {
     "slug": "cote-de-nuits",
     "name": "Côte de Nuits",
+    "metaTitle": "Côte de Nuits",
+    "metaDescription": "La Côte de Nuits et les Hautes Côtes produisent <b>une grande majorité de vins rouges</b>. Cette région viticole est ainsi le paradis du Pinot Noir, qui engendre la plupart des <b>Grands Crus</b> de Bourgogne.",
     "image": "cote-de-nuits.jpg",
     "shortDescription": "La Côte de Nuits et les Hautes Côtes produisent <b>une grande majorité de vins rouges</b>. Cette région viticole est ainsi le paradis du Pinot Noir, qui engendre la plupart des <b>Grands Crus</b> de Bourgogne.",
     "description": "La Côte de Nuits et les Hautes Côtes produisent <b>une grande majorité de vins rouges</b>.<br />Cette région viticole est ainsi le paradis du Pinot Noir, qui engendre la plupart des <b>Grands Crus</b> de Bourgogne.<br /><br />Les vins blancs y sont plus rares, nés du Chardonnay et, quelques fois, de l’Aligoté.<br />La <b>renommée</b> des appellations de la Côte de Nuits n’est plus à faire. <br />Certains auteurs ont même surnommé ce terroir d’exception les « Champs-Elysées de la Bourgogne »"
@@ -9,6 +11,8 @@
   {
     "slug": "cote-de-beaune",
     "name": "Côte de Beaune",
+    "metaTitle": "Côte de Beaune",
+    "metaDescription": "Aux environs de Beaune, dans des paysages vallonnés, les vignerons produisent des appellations mondialement connues. Venez découvrir chez nous ces vins rouges et blancs de caractère, comme le Volnay, le Meursault Premier Cru ou l’un des plus célèbres Grands Crus du monde, le Montrachet...",
     "image": "cote-de-beaune.jpg",
     "shortDescription": "Aux environs de Beaune, dans des paysages vallonnés, les vignerons produisent des appellations mondialement connues. Venez découvrir chez nous ces vins rouges et blancs de caractère, comme le Volnay, le Meursault Premier Cru ou l’un des plus célèbres Grands Crus du monde, le Montrachet...",
     "description": "Aux environs de Beaune, dans des paysages vallonnés, les vignerons produisent des appellations mondialement connues.<br />Venez découvrir chez nous ces vins rouges et blancs de caractère, comme le Volnay, le Meursault Premier Cru ou l’un des plus célèbres Grands Crus du monde, le Montrachet...<br /><br />Aux alentours de Beaune, les terres viticoles sont essentiellement plantées de Pinot Noir (Volnay, Pommard), même si le <b>Chardonnay</b> donne quelques merveilles sur la colline de Corton (Corton, Corton-Charlemagne).<br />A partir de Meursault, le Chardonnay prédomine et donne des vins d’une grande diversité aromatiques, entre appellations mythiques (Bâtard-Montrachet) et petits « trésors » moins connus (Auxey-Duresses, Santenay…).<br />À partir de ces deux cépages typiquement bourguignons, les vignerons de la région produisent <b>des appellations célèbres</b>."
@@ -16,6 +20,8 @@
   {
     "slug": "cote-chalonnaise",
     "name": "Côte châlonnaise",
+    "metaTitle": "Côte châlonnaise",
+    "metaDescription": "Le vignoble de la Côte Chalonnaise est formé de sols argilo-calcaires provenant du soubassement rocheux calcaire d'âge jurassique ou plus ancien.",
     "image": "cote-chalonnaise.jpg",
     "shortDescription": "Le vignoble de la Côte Chalonnaise est formé de sols argilo-calcaires provenant du soubassement rocheux calcaire d'âge jurassique ou plus ancien.",
     "description": "Le vignoble de la Côte Chalonnaise est formé de sols argilo-calcaires provenant du soubassement rocheux calcaire d'âge jurassique ou plus ancien.<br /><br />La Côte Chalonnaise produit aussi bien des vins blancs que des vins rouges, leur réputation est souvent excellente."
@@ -23,6 +29,8 @@
   {
     "slug": "maconnais",
     "name": "Mâconnais",
+    "metaTitle": "Mâconnais",
+    "metaDescription": "Terroir bourguignon le plus méridional, le Mâconnais étend ses vignes sur 35 km de long, entre Sennecey-le-Grand et Saint-Vérand, le Mâconnais voit alterner panoramas vallonnés et falaises monumentales.",
     "image": "maconnais.jpg",
     "shortDescription": "Terroir bourguignon le plus méridional, le Mâconnais étend ses vignes sur 35 km de long, entre Sennecey-le-Grand et Saint-Vérand, le Mâconnais voit alterner panoramas vallonnés et falaises monumentales.",
     "description": "Terroir bourguignon le plus méridional, le Mâconnais étend ses vignes sur 35 km de long, entre Sennecey-le-Grand et Saint-Vérand, le Mâconnais voit alterner panoramas vallonnés et falaises monumentales.<br />Dans ce cadre rêvé, royaume du Chardonnay où le Gamay subsiste par endroit, vous dégusterez des vins blancs puissants et riches en arômes. Sans oublier quelques rouges gourmands !<br /><br />Ici, peut-être plus que dans d’autres régions viticoles de Bourgogne, les moines ont eu un rôle décisif. L’abbaye de Cluny, fondée en 909 par Guillaume 1er, Comte de Mâcon, suit la règle bénédictine dont le principe, Ora et labora (prie et travaille), conduit les moines à créer leur propre vignoble.<br /><br />C’est en partie en réaction à la richesse de cette abbaye que Cîteaux sera fondée, en 1098, par Robert de Moslesme. Si le vignoble de Cluny s’étend principalement dans le sud de la Bourgogne actuelle, les moines possèderont des vignes plus au nord, notamment la célèbre Romanée-St-Vivant"

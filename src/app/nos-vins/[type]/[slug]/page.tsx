@@ -5,6 +5,10 @@ import fs from 'node:fs';
 import { Designation } from '@/app/typing/designation';
 import { Wine } from '@/app/typing/wine';
 
+type Props = {
+  params: { slug: string };
+};
+
 export async function generateStaticParams() {
   const jsonWines = fs.readFileSync('src/app/datas/wines.json', 'utf8');
   const wines: Wine[] = JSON.parse(jsonWines);
@@ -15,7 +19,17 @@ export async function generateStaticParams() {
   }));
 }
 
-export default function WinePage({ params: { slug } }: { params: { slug: string } }) {
+export function generateMetadata({ params: { slug } }: Props) {
+  const jsonWines = fs.readFileSync('src/app/datas/wines.json', 'utf8');
+  const wine: Wine = JSON.parse(jsonWines).find((wine: Wine) => wine.slug === slug);
+
+  return {
+    title: wine.name,
+    description: wine.shortDescription
+  };
+}
+
+export default function WinePage({ params: { slug } }: Props) {
   const jsonDesignation = fs.readFileSync('src/app/datas/designation.json', 'utf8');
   const jsonWines = fs.readFileSync('src/app/datas/wines.json', 'utf8');
   const wine: Wine = JSON.parse(jsonWines).find((wine: Wine) => wine.slug === slug);

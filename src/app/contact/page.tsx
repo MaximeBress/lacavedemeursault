@@ -1,4 +1,11 @@
 import ContactForm from '@/app/components/ContactForm';
+import type { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'Besoin d’aide ? Contactez-nous chez La Cave de Meursault',
+  description:
+    'Service client La Cave de Meursault : Nous répondons à vos demandes rapidement. Contactez-nous dès maintenant.'
+};
 
 export default function Contact() {
   return (
