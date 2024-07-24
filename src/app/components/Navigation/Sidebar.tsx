@@ -18,7 +18,7 @@ const Sidebar = ({ isOpen, toggle }: { isOpen: boolean; toggle: () => void }) =>
           />
         </svg>
       </button>
-      <Link href="/" className="absolute left-0 top-0 p-5">
+      <Link href="/" className="absolute left-0 top-0 p-5" onClick={toggle}>
         <Image src="/logo.png" alt="logo" width={250} height={150} />
       </Link>
       <ul className="w-full text-left">

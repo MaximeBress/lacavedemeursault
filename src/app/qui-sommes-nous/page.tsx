@@ -95,9 +95,9 @@ export default function Us() {
                 Néanmoins, à chacun ses préférences : David est en contact direct avec la clientèle alors que Jean et
                 Jean-Michel s’occupent plus de la partie viticulture-vinification-élevage.
                 <br />
-                Même si la maison familiale reste à Nuits Saint Georges et qu’une partie des vins de négoce y sont
-                encore vinifiés et élevés, nous avons choisi de regrouper sur un seul site d’exploitation, à Meursault,
-                l’ensemble des activités du Domaine Boyer Bouanich.
+                Même si la maison familiale reste à Meursault et qu’une partie des vins de négoce y sont encore vinifiés
+                et élevés, nous avons choisi de regrouper sur un seul site d’exploitation, à Meursault, l’ensemble des
+                activités du Domaine Boyer Bouanich.
                 <br />
                 C’est là qu’une salle de dégustation avec vue panoramique sur le vignoble de Meursault vous attend pour
                 partager le verre de l’amitié.

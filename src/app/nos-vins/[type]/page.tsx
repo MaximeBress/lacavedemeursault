@@ -48,17 +48,21 @@ export default function WinePage({ params: { type } }: Props) {
         <div className="container !h-full">
           <div className="mx-[-15px] flex !h-full flex-wrap">
             <div className="w-full max-w-full flex-[0_0_auto] items-start justify-center self-center px-[15px] md:!ml-[8.33333333%] md:w-10/12 lg:!ml-0 lg:w-8/12 lg:text-left xl:w-8/12 xl:text-left xxl:w-8/12">
-              <h2 className="font-great-vibes animate__animated animate__slideInDown animate__delay-500ms mb-4 text-[calc(1.405rem_+_1.86vw)] font-bold !leading-[1.2] text-white xl:text-[2rem]">
+              <h2 className="font-great-vibes animate__animated animate__slideInDown animate__delay-500ms mb-2 text-[calc(1.405rem_+_1.86vw)] font-bold !leading-[1.2] text-white xl:text-[2rem]">
                 {designation.name}
               </h2>
               <p
-                className="lead animate__animated animate__slideInRight animate__delay-1s mb-7 text-[1rem] leading-normal text-white"
+                className="lead animate__animated animate__slideInRight animate__delay-1s mb-7 leading-normal text-white sm:hidden xl:text-[1rem] xxl:text-[1rem] xsm:hidden"
                 dangerouslySetInnerHTML={{ __html: designation.description }}
+              />
+              <p
+                className="lead animate__animated animate__slideInRight animate__delay-1s mb-7 leading-normal text-white md:hidden lg:hidden xl:hidden"
+                dangerouslySetInnerHTML={{ __html: designation.shortDescription }}
               />
               <div className="animate__animated animate__slideInUp animate__delay-1500ms">
                 <Link
                   href="/nos-vins"
-                  className="btn btn-lg btn-outline-white !rounded-[50rem] !border-[2px] !border-white bg-[#ffffff] !text-white hover:border-white hover:bg-[#ffffff] hover:!text-[#343f52] focus:shadow-[rgba(255,255,255,1)] active:border-white active:bg-[#ffffff] active:!text-[#343f52] disabled:border-white disabled:bg-transparent disabled:text-white"
+                  className="btn btn-outline-white !rounded-[50rem] !border-[2px] !border-white bg-[#ffffff] !text-white hover:border-white hover:bg-[#ffffff] hover:!text-[#343f52] focus:shadow-[rgba(255,255,255,1)] active:border-white active:bg-[#ffffff] active:!text-[#343f52] disabled:border-white disabled:bg-transparent disabled:text-white xl:px-[1.4rem] xl:py-[0.65rem] xl:text-[0.85rem] xxl:px-[1.4rem] xxl:py-[0.65rem] xxl:text-[0.85rem]"
                 >
                   Retour vers tous les vins
                 </Link>
