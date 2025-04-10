@@ -10,13 +10,14 @@ export async function POST(req: NextRequest) {
     const { email, name, message, phone } = await req.json();
 
     const contactEmail = process.env.CONTACT_EMAIL;
+    const formEmail = process.env.FROM_EMAIL;
 
     if (!contactEmail) {
       return NextResponse.json({ error: 'No contact email provided' }, { status: 500 });
     }
 
     const { data, error } = await resend.emails.send({
-      from: `La cave de Meursault <noreply@resend.dev>`,
+      from: `La cave de Meursault <${formEmail}>`,
       to: [contactEmail],
       subject: 'Nouvelle prise de contact',
       text: '',
